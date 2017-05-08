@@ -1,0 +1,43 @@
+<ion-header>
+
+  <ion-navbar>
+    <ion-title>Post Details</ion-title>
+  </ion-navbar>
+
+</ion-header>
+
+
+<ion-content>
+
+<ion-content class="cards-bg">
+
+  <ion-card>
+
+    <img src="{{post.thumbnail}}"/>
+
+    <ion-card-content>
+      <ion-card-title>
+        {{post.title}}
+      </ion-card-title>
+      <p>
+        The most popular industrial group ever, and largely responsible for bringing the music to a mass audience.
+      </p>
+    </ion-card-content>
+
+    <ion-row no-padding>
+      <ion-col>
+        <button ion-button clear small color="danger" icon-left>
+          <ion-icon name="person"></ion-icon>
+          {{post.author}}
+        </button>
+      </ion-col>
+      <ion-col text-right>
+        <button ion-button small color="danger" icon-left>
+           <ion-icon name="logo-reddit"></ion-icon>
+            View on Reddit
+        </button>
+      </ion-col>
+    </ion-row>
+
+  </ion-card>
+</ion-content>
