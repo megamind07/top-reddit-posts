@@ -20,7 +20,11 @@
         {{post.title}}
       </ion-card-title>
       <p>
-        The most popular industrial group ever, and largely responsible for bringing the music to a mass audience.
+        <ion-icon name="thumbs-up"> {{post.ups}}</ion-icon>&nbsp;&nbsp;
+        <ion-icon name="chatboxes"> {{post.num_comments}}</ion-icon>
+      </p>
+      <p>
+        {{post.selftext}}
       </p>
     </ion-card-content>
 

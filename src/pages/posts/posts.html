@@ -5,6 +5,20 @@
 </ion-header>
 
 <ion-content>
+
+  <ion-list>
+    <ion-item>
+      <ion-label>Category</ion-label>
+      <ion-select [(ngModel)]="category" (ionChange)="update_category(category)">
+        <ion-option value="sports" selected>Sports</ion-option>
+        <ion-option value="news">News</ion-option>
+        <ion-option value="Jokes">Jokes</ion-option>
+        <ion-option value="movies">Movies</ion-option>
+        <ion-option value="gifs">GIFs</ion-option>
+      </ion-select>
+    </ion-item>
+  </ion-list>
+
   <ion-list>
     <ion-item *ngFor="let post of posts">
       <ion-thumbnail item-left>
@@ -12,10 +26,11 @@
       </ion-thumbnail>
       <h2>{{post.data.title}}</h2>
       <p>
-        <ion-icon name="thumbs-up">{{post.data.ups}}</ion-icon>&nbsp;&nbsp;
-        <ion-icon name="chatboxes">{{post.data.num_comments}}</ion-icon>
+        <ion-icon name="thumbs-up"> {{post.data.ups}}</ion-icon>&nbsp;&nbsp;
+        <ion-icon name="chatboxes"> {{post.data.num_comments}}</ion-icon>
       </p>
       <button ion-button clear item-right (click)= "show_post(post)">View</button>
     </ion-item>
   </ion-list>
+
 </ion-content>

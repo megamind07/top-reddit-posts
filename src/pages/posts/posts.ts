@@ -9,7 +9,7 @@ import { PostDetails } from "../post-details/post-details";
 })
 export class PostsPage {
 
-  category: String = "sports";
+  category: String;
   limit: Number = 5;
   posts: any;
 
@@ -28,6 +28,10 @@ export class PostsPage {
 
   show_post(post) {
     this.navCtrl.push(PostDetails, post);
+  }
+
+  update_category(category) {
+    console.log(this.getPosts(category, this.limit));
   }
 
 }

@@ -13,6 +13,6 @@ export class RedditService {
     }
 
     fetchPostsByCategoryAndLimit(category,limit) {
-        return this.http.get(this.baseUrl + "/sports/top.json?limit=5").map(res => res.json());
+        return this.http.get(this.baseUrl + "/" + category + "/top.json?limit=5").map(res => res.json());
     }
 }
