@@ -6,6 +6,30 @@
   </ion-navbar>
 </ion-header>
 
-<ion-content padding>
-  Settings Page
+<ion-content>
+  <ion-list>
+    <ion-item>
+      <ion-label>Default Category</ion-label>
+      <ion-select [(ngModel)]="category" (ionChange)="update_category(category)">
+        <ion-option value="sports" selected>Sports</ion-option>
+        <ion-option value="news">News</ion-option>
+        <ion-option value="Jokes">Jokes</ion-option>
+        <ion-option value="movies">Movies</ion-option>
+        <ion-option value="gifs">GIFs</ion-option>
+      </ion-select>
+    </ion-item>
+  </ion-list>
+<ion-content>
+  <ion-list>
+    <ion-item>
+      <ion-label>Limit</ion-label>
+      <ion-select [(ngModel)]="limit" (ionChange)="update_limit(limit)">
+        <ion-option value="5">5</ion-option>
+        <ion-option value="10">10</ion-option>
+        <ion-option value="15">15</ion-option>
+        <ion-option value="20">20</ion-option>
+        <ion-option value="25">25</ion-option>
+      </ion-select>
+    </ion-item>
+  </ion-list>
 </ion-content>

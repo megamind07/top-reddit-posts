@@ -6,6 +6,8 @@ import "rxjs/Rx";
 export class RedditService {
     http: any;
     baseUrl: String = "";
+    category: any;
+    limit: any;
 
     constructor(http: Http) {
         this.http = http;
@@ -13,6 +15,6 @@ export class RedditService {
     }
 
     fetchPostsByCategoryAndLimit(category,limit) {
-        return this.http.get(this.baseUrl + "/" + category + "/top.json?limit=5").map(res => res.json());
+        return this.http.get(this.baseUrl + "/" + category + "/top.json?limit=" + limit).map(res => res.json());
     }
 }

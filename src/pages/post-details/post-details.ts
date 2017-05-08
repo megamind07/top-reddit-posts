@@ -18,13 +18,9 @@ export class PostDetails {
 
   constructor(public navCtrl: NavController, public navParams: NavParams) {
     this.post = navParams.data.data;
-    console.log(navParams.data.data);
   }
 
   ionViewDidLoad() {
-    // this.post = this.navParams.data;
-    // console.log(this.post);
-
     console.log('ionViewDidLoad PostDetails');
   }
 

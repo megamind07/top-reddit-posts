@@ -10,14 +10,17 @@ import { PostDetails } from "../post-details/post-details";
 export class PostsPage {
 
   category: String;
-  limit: Number = 5;
+  limit: String;
   posts: any;
 
   constructor(public navCtrl: NavController,
               private redditService: RedditService) {
+    this.category = localStorage.getItem('category') ? localStorage.getItem('category') : "sports";
+    this.limit = localStorage.getItem('limit') ? localStorage.getItem('limit') : "5";
+  }
 
-    this.getPosts("sports", 5);
-
+  ionViewDidLoad() {
+    this.getPosts(this.category, this.limit);
   }
 
   getPosts(category, limit) {
